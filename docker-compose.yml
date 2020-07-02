@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+    app:
+        build:
+            context: .
+        ports:
+            - "8000:8000" 
+#The LHS of the ratio is the port to be captured on the host
+#The RHS is the port on the image
+        volumes:
+            - ./app:/app
+        command: >
+            sh -c "python manage.py runserver 0.0.0.0:8000"
+#The "0.0.0.0." makes the server available on all the IP adresses on the docker containter
+#-c string:  If  the  -c  option  is  present, then commands are read from the string
+# present after -c.
