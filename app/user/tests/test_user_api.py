@@ -14,7 +14,11 @@ def create_user(**params):
 
 class PublicUserAPITests(TestCase):
     """Test the users API (public)."""
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 2d8c01bf7c345e1c15db16ef9f0185aaded44b84
     def setUp(self):
         self.client = APIClient()
 
@@ -55,3 +59,7 @@ class PublicUserAPITests(TestCase):
             email=payload['email']
         )
         self.assertFalse(user_exists)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2d8c01bf7c345e1c15db16ef9f0185aaded44b84
